@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+<div class="formularioRegistrase">
+    <h1>Registrarse</h1>
+    <form id="registro">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="usuarioInicio">Usuario:</label>
+        <input type="text" id="usuarioInicio" name="usuario" required>
+        <label for="contrasenaInicio">Contraseña:</label>
+        <input type="password" id="contrasenaInicio" name="contrasena" required>
+        <button id="btnRegistro" type="submit">Registrarse</button>
+    </form>
+</div>
+<div class="formularioIncioSesion">
+    <h1>Inicio de sesion</h1>
+    <form id="login">
+        <label for="usuarioRegistro">Usuario:</label>
+        <input type="text" id="usuarioRegistro" name="usuario" required>
+        <label for="contrasenaRegistro">Contraseña:</label>
+        <input type="password" id="contrasenaRegistro" name="contrasena" required>
+        <button id="btnInicio" type="submit">Iniciar sesion</button>
+    </form>
+</div>
+
+</body>
+</html>

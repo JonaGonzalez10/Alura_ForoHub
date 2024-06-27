@@ -1,0 +1,65 @@
+*{
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../img/userlog.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.formularioRegistrase {
+    margin-right: 20%;
+}
+
+.formularioIncioSesion {
+    margin-left: 20%;
+}
+
+.formularioRegistrase, .formularioIncioSesion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid rgba(75, 6, 246, 0.62);
+    padding: 20px;
+    background-color: rgba(162, 224, 206, 0);
+    box-shadow: 0 0 100px rgb(0, 0, 0);
+}
+.formularioRegistrase form label,
+.formularioRegistrase form input,
+.formularioIncioSesion form label,
+.formularioIncioSesion form input {
+    display: block;
+    margin-bottom: 10px;
+}
+#btnRegistro, #btnInicio {
+    background-color: #704caf; /* Color de fondo */
+    border: none; /* Sin bordes */
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Para que se muestre en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima */
+    transition-duration: 0.4s; /* Duración de la transición */
+}
+
+#btnRegistro:hover, #btnInicio:hover {
+    background-color: #45a049; /* Cambia el color de fondo cuando se pasa el cursor por encima */
+}
