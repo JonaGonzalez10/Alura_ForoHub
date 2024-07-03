@@ -1,16 +1,10 @@
 
 K
 forohub/frontend/login.html,b\9\b9c07363fc50c52ce852e4a8d48577b38d13f0ce
-J
-forohub/frontend/hola.html,e\f\ef4558a1a38caf3ef40b8ce7755874dea98c8c4e
-K
-forohub/frontend1/hola.html,9\6\9627a1eaffcf8f38f76747bfcd3ed0be6aa09c73
 Q
 !forohub/frontend/styles/login.css,e\a\ead6576e5955547228c7a1e306564b0a72576b09
 G
 forohub/backend/pom.xml,8\c\8cfd06486ec4d8547a33345931b1ed4266fbfef6
-s
-Cforohub/backend/src/main/java/com/alura/forohub/modelo/usuario.java,e\7\e752bcc679fc333711526c8387d3b53014aae0bb
 ƒ
 Sforohub/backend/src/main/java/com/alura/forohub/repositorio/usuarioRepositorio.java,5\6\561f5d7d4e268ae022da6e9e70c18e325e832aeb
 y
@@ -27,3 +21,17 @@ y
 Iforohub/backend/src/main/java/com/alura/forohub/servicio/JwtServicio.java,8\d\8d410ba9abb75c0d2eb59fd3e7a693b0f1f7b0ab
 ‰
 Yforohub/backend/src/main/java/com/alura/forohub/controlador/AutenticacionControlador.java,5\4\54e823cb70199df985e2e98c21f0e0c3093b4747
+ˆ
+Xforohub/backend/src/main/java/com/alura/forohub/servicio/ServicioAutenticacionAdmin.java,0\5\052e1a9721f38383ac09c910f052de3b5763e54d
+ˆ
+Xforohub/backend/src/main/java/com/alura/forohub/servicio/AutenticacionAdminServicio.java,d\2\d26622d30894480f5b621c89a16b779cc1ad7024
+q
+Aforohub/backend/src/main/java/com/alura/forohub/dto/LoginDto.java,0\f\0fca97e980ad019719aadfe538fff5bc54f9fbcb
+
+Oforohub/backend/src/main/java/com/alura/forohub/modelo/AutenticacionModelo.java,d\f\df54b5882e26ff1750e54ca18964102bde76a93e
+L
+forohub/frontend/js/login.js,0\d\0df7997809add38fad5b3366701f5acc289289c4
+v
+Fforohub/backend/src/main/java/com/alura/forohub/config/CorsConfig.java,1\2\127a820d39ff8b62a1333515575dd8fb325fbdb8
+~
+Nforohub/backend/src/main/java/com/alura/forohub/seguridad/SeguridadConfig.java,5\c\5c82a6e1dfe80737a0ee301afd6b1c2c16447d51

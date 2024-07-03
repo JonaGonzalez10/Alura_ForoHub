@@ -19,4 +19,5 @@ public class UsuarioServicio {
     public UsuarioModelo buscarPorCorreo(String correo) {
         return usuarioRepositorio.findByuCorreo(correo);
     }
+
 }

@@ -5,6 +5,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Service
 public class JwtServicio {
     @Value("${jwt.secret}")
@@ -16,8 +18,8 @@ public class JwtServicio {
     public String generarToken(String correo) {
         return Jwts.builder()
                 .setSubject(correo)
-                .setExpiration(new java.util.Date(System.currentTimeMillis() + expiracion))
-                .signedWith(SignatureAlgorithm.HS512, secreto)
+                .setExpiration(new Date(System.currentTimeMillis() + expiracion))
+                .signWith(SignatureAlgorithm.HS512, secreto)
                 .compact();
     }
 

@@ -2,6 +2,7 @@ package com.alura.forohub.modelo;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 
 @Data
 @Entity
@@ -15,6 +16,11 @@ public class UsuarioModelo {
     private String uNombre;
 
     private String uCorreo;
+    @Getter
     private String uContrasena;
     private int uPerfil;
+
+    public String getuContrasena() {
+        return this.uContrasena;
+    }
 }
