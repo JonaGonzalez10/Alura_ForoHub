@@ -22,8 +22,6 @@ Iforohub/backend/src/main/java/com/alura/forohub/servicio/JwtServicio.java,8\d\
 ‰
 Yforohub/backend/src/main/java/com/alura/forohub/controlador/AutenticacionControlador.java,5\4\54e823cb70199df985e2e98c21f0e0c3093b4747
 ˆ
-Xforohub/backend/src/main/java/com/alura/forohub/servicio/ServicioAutenticacionAdmin.java,0\5\052e1a9721f38383ac09c910f052de3b5763e54d
-ˆ
 Xforohub/backend/src/main/java/com/alura/forohub/servicio/AutenticacionAdminServicio.java,d\2\d26622d30894480f5b621c89a16b779cc1ad7024
 q
 Aforohub/backend/src/main/java/com/alura/forohub/dto/LoginDto.java,0\f\0fca97e980ad019719aadfe538fff5bc54f9fbcb
@@ -35,3 +33,7 @@ v
 Fforohub/backend/src/main/java/com/alura/forohub/config/CorsConfig.java,1\2\127a820d39ff8b62a1333515575dd8fb325fbdb8
 ~
 Nforohub/backend/src/main/java/com/alura/forohub/seguridad/SeguridadConfig.java,5\c\5c82a6e1dfe80737a0ee301afd6b1c2c16447d51
+w
+Gforohub/backend/src/main/java/com/alura/forohub/ForohubApplication.java,8\5\8567974a4d93e18bcbdfb3fc3f3898f2dd6ebb4b
+}
+Mforohub/backend/src/main/java/com/alura/forohub/seguridad/JwtTokenFilter.java,a\c\acbfb00099e92c64e96470962543184ecda33e64

@@ -18,9 +18,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     };
 
     // Envía la solicitud al servidor
-    fetch('http://localhost:8080/autenticacion/login', {
+    fetch('http://localhost:8080/login', {
         method: 'POST',
         headers: {
+            'Authorization': 'Basic ' + btoa('user:Nastya'),
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(loginData),

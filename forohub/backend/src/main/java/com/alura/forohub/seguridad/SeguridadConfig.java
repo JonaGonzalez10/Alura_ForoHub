@@ -1,36 +1,55 @@
 package com.alura.forohub.seguridad;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.http.HttpMethod;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import com.alura.forohub.servicio.JwtServicio;
 
 @Configuration
 @EnableWebSecurity
-public class SeguridadConfig {
+public class SeguridadConfig implements WebMvcConfigurer {
+
+    @Autowired
+    private JwtServicio jwtServicio;
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/usuario/**").permitAll()
-                .antMatchers(HttpMethod.POST, "/login").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .addFilterBefore(autenticacionPorTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-        return http.build();
+    public JwtTokenFilter jwtTokenFilter() {
+        return new JwtTokenFilter(jwtServicio);
     }
 
-    // Asumiendo que tienes un bean para AutenticacionPorTokenFilter
+
+
     @Bean
-    public AutenticacionPorTokenFilter autenticacionPorTokenFilter() {
-        // devuelve una instancia de AutenticacionPorTokenFilter
-        return new AutenticacionPorTokenFilter();
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**")
+                        .allowedOrigins("*")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
+            }
+        };
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .cors(cors -> cors.and())
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(sessionManagement ->
+                        sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeRequests(authorizeRequests ->
+                        authorizeRequests
+                                .antMatchers("/api/auth/**").permitAll()
+                                .anyRequest().authenticated())
+                .addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 }
